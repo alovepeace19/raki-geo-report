@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RAKI Quick Haircut 110天 Google 与 AI 搜索可见度报告</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Archivo+Black&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandBlack: '#050505',
+            brandPanel: '#111111',
+            brandPanel2: '#181818',
+            brandLine: 'rgba(255,255,255,0.14)',
+            brandWhite: '#f8f8f3',
+            brandMuted: '#b7b7ad',
+            brandDim: '#75756d',
+            brandYellow: '#FBB03B',
+            brandYellowDark: '#9a6508',
+            brandSilver: '#e5e5df',
+            brandGold: '#FBB03B'
+          },
+          fontFamily: {
+            sans: ['Inter', 'Arial', 'sans-serif'],
+            display: ['Archivo Black', 'Impact', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+
+    body { 
+      font-family: 'Inter', sans-serif; 
+      scroll-behavior: smooth; 
+      background-color: #000;
+      color: #fff;
+    }
+    section { border-bottom: 1px solid #1a1a1a; }
+    .btn-booking-primary {
+      background-color: #FBB03B;
+      color: #000;
+      transition: all 0.3s ease;
+      font-weight: 900;
+      border-radius: 0px !important;
+    }
+    .btn-booking-primary:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 25px rgba(251, 176, 59, 0.4);
+    }
+    .card-hover { 
+      transition: all 0.3s ease; 
+      border: 1px solid #1a1a1a;
+      background-color: #000;
+      border-radius: 0px !important;
+    }
+    .card-hover:hover { 
+      transform: translateY(-5px); 
+      border-color: #FBB03B;
+    }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #000; }
+    ::-webkit-scrollbar-thumb { background: #333; border-radius: 0px; }
+    ::-webkit-scrollbar-thumb:hover { background: #FBB03B; }
+
+    body { background:#050505; font-family:'Inter',sans-serif; }
+    ::-webkit-scrollbar{width:8px;height:8px}::-webkit-scrollbar-track{background:#050505}::-webkit-scrollbar-thumb{background:#FBB03B;border-radius:4px}
+    .grid-bg{background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:42px 42px}
+    .cut-glow{box-shadow:0 0 28px rgba(251,176,59,.12)}
+    .card-hover:hover{border-color:rgba(251,176,59,.65)!important;box-shadow:0 0 26px rgba(251,176,59,.14)}
+    .stripe{background:repeating-linear-gradient(135deg,rgba(251,176,59,.22),rgba(251,176,59,.22) 8px,transparent 8px,transparent 16px)}
+    @media print{body{background:#fff;color:#000}.no-print{display:none!important}.print-border{border:1px solid #ccc!important}}
+  </style>
+</head>
+<body class="text-brandWhite antialiased">
+  <div class="min-h-screen grid-bg">
+    <div class="h-1.5 w-full bg-brandYellow"></div>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      <header class="mb-10 flex flex-col md:flex-row md:items-end md:justify-between gap-6 border-b border-brandLine pb-8">
+        <div>
+          <div class="flex flex-wrap items-center gap-3 mb-3">
+            <span class="px-3 py-1 text-xs font-black tracking-widest text-brandBlack bg-brandYellow rounded uppercase">GEO & AI 搜索可见度报告</span>
+            <span class="text-xs text-brandDim flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-brandYellow animate-pulse"></span>110天 Google 监控与近30天转化审计</span>
+          </div>
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-none text-brandWhite font-display uppercase">
+            RAKI <span class="text-brandYellow">QUICK</span> HAIRCUT
+          </h1>
+          <p class="text-xs tracking-[0.25em] text-brandYellow font-bold uppercase mt-2">Burnaby · Crystal Mall · Japanese & Korean Quick Cut</p>
+          <p class="mt-4 text-base text-brandMuted max-w-3xl font-light leading-relaxed">
+            本报告基于 <strong class="text-brandWhite">rakihair.com</strong> 官网上线后的搜索可见度、用户访问与预约行为，复盘 RAKI 在 Burnaby / Metrotown 快剪场景中的 Google 与 AI 搜索表现。报告周期已统一调整为 <strong class="text-brandYellow">110天</strong>，并将内容场景改为「$19.99 快剪、Fast Pass 跳过排队、Crystal Mall、日韩标准」的美髮业务模型。
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 no-print">
+          <button onclick="window.print()" class="px-4 py-2.5 rounded-lg bg-brandPanel border border-brandLine hover:border-brandYellow text-brandWhite hover:text-brandYellow transition-all flex items-center gap-2 text-xs font-semibold"><i class="fa-solid fa-print"></i><span>导出 PDF</span></button>
+          <a href="#roi-sandbox" class="btn-booking-primary px-4 py-2.5 flex items-center gap-2 text-xs font-extrabold tracking-wider uppercase"><i class="fa-solid fa-scissors"></i><span>收益沙盘</span></a>
+        </div>
+      </header>
+
+      <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+        <div class="space-y-6">
+          <div class="flex items-center gap-2 border-b border-brandYellow/30 pb-3">
+            <span class="w-3 h-6 bg-brandYellow rounded-full"></span>
+            <h2 class="text-lg font-black tracking-widest text-brandWhite uppercase font-display">板块一：Google Search 专属表现 <span class="text-xs text-brandYellow block sm:inline font-sans normal-case tracking-normal ml-0 sm:ml-2">110天累计</span></h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="bg-brandPanel rounded-xl border border-brandLine p-5 card-hover transition-all"><div class="flex items-center justify-between mb-2"><span class="text-[11px] font-black tracking-wider text-brandDim uppercase">谷歌展现量</span><i class="fa-solid fa-bullseye text-brandYellow"></i></div><div class="text-3xl font-black text-brandYellow font-display">29.5K</div><p class="text-[11px] text-brandMuted mt-2 leading-relaxed">Google 搜索与地图中的自然曝光大盘。</p></div>
+            <div class="bg-brandPanel rounded-xl border border-brandLine p-5 card-hover transition-all"><div class="flex items-center justify-between mb-2"><span class="text-[11px] font-black tracking-wider text-brandDim uppercase">自然点击数</span><i class="fa-solid fa-mouse-pointer text-brandYellow"></i></div><div class="text-3xl font-black text-brandYellow font-display">2.78K</div><p class="text-[11px] text-brandMuted mt-2 leading-relaxed">用户从搜索结果或地图结果直接进入官网。</p></div>
+            <div class="bg-brandPanel rounded-xl border border-brandLine p-5 card-hover transition-all"><div class="flex items-center justify-between mb-2"><span class="text-[11px] font-black tracking-wider text-brandDim uppercase">平均排名</span><i class="fa-solid fa-ranking-star text-brandYellow"></i></div><div class="text-3xl font-black text-brandWhite font-display">3.8</div><p class="text-[11px] text-brandMuted mt-2 leading-relaxed">Burnaby / Metrotown 快剪、便宜剪髮、日韩发型店相关意向词进入高位推荐。</p></div>
+          </div>
+          <div class="p-3.5 bg-brandYellow/5 border-l-2 border-brandYellow rounded-r-lg text-xs text-brandMuted"><span class="text-brandYellow font-bold"><i class="fa-solid fa-circle-exclamation mr-1"></i>110天洞察：</span>官网已从单一品牌搜索，扩展到「quick haircut」「cheap haircut」「Metrotown haircut」「Crystal Mall haircut」等非品牌消费场景词。</div>
+        </div>
+
+        <div class="space-y-6">
+          <div class="flex items-center gap-2 border-b border-brandSilver/30 pb-3">
+            <span class="w-3 h-6 bg-brandSilver rounded-full"></span>
+            <h2 class="text-lg font-black tracking-widest text-brandWhite uppercase font-display">板块二：全网访问与预约大盘 <span class="text-xs text-brandSilver block sm:inline font-sans normal-case tracking-normal ml-0 sm:ml-2">近30天完整统计</span></h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="bg-brandPanel rounded-xl border border-brandLine p-5 card-hover transition-all"><div class="flex items-center justify-between mb-2"><span class="text-[11px] font-black tracking-wider text-brandDim uppercase">月访问量</span><i class="fa-solid fa-users text-brandSilver"></i></div><div class="text-3xl font-black text-brandSilver font-display">2,780</div><p class="text-[11px] text-brandMuted mt-2 leading-relaxed">近30天官网总访问量。</p></div>
+            <div class="bg-brandPanel rounded-xl border border-brandLine p-5 card-hover transition-all"><div class="flex items-center justify-between mb-2"><span class="text-[11px] font-black tracking-wider text-brandDim uppercase">预约动作</span><i class="fa-solid fa-calendar-check text-brandYellow"></i></div><div class="text-3xl font-black text-brandYellow font-display">377</div><p class="text-[11px] text-brandMuted mt-2 leading-relaxed">Fast Pass / 路线 / 电话等高意向交互。</p></div>
+            <div class="bg-brandPanel rounded-xl border border-brandLine p-5 card-hover transition-all"><div class="flex items-center justify-between mb-2"><span class="text-[11px] font-black tracking-wider text-brandDim uppercase">转化率</span><i class="fa-solid fa-percent text-brandYellow"></i></div><div class="text-3xl font-black text-brandYellow font-display">13.6%</div><p class="text-[11px] text-brandMuted mt-2 leading-relaxed">每100位访客约13–14位产生预约或到店意向。</p></div>
+          </div>
+          <div class="p-3.5 bg-brandSilver/5 border-l-2 border-brandSilver rounded-r-lg text-xs text-brandMuted"><span class="text-brandWhite font-bold"><i class="fa-solid fa-circle-nodes mr-1"></i>30天转化洞察：</span>2,780 次访问带来 377 次高意向动作，证明「价格清晰 + 地点清晰 + 可跳过排队」极利于转化。</div>
+        </div>
+      </section>
+
+      <section class="bg-gradient-to-r from-brandYellow/10 to-brandWhite/5 rounded-xl border border-brandLine p-5 mb-8">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-brandYellow/10 border border-brandYellow/30 flex items-center justify-center text-brandYellow shrink-0"><i class="fa-solid fa-circle-info text-xl"></i></div>
+          <div><h4 class="text-sm font-extrabold tracking-wide uppercase text-brandWhite flex items-center gap-2">数据监测源审计差异释义 <span class="px-2 py-0.5 rounded text-[9px] font-black bg-brandYellow text-brandBlack">专业审计</span></h4><p class="text-xs text-brandMuted mt-1.5 leading-relaxed">1. <strong class="text-brandWhite">Google 搜索数据</strong>：以官网上线至今 110 天为主，评估搜索曝光、点击与排名资产。<br>2. <strong class="text-brandWhite">网站行为数据</strong>：以近30天完整追踪为主，评估官网访问、Fast Pass、路线、电话等高价值行为。</p></div>
+        </div>
+      </section>
+
+      <section class="bg-brandPanel rounded-xl border border-brandLine p-5 mb-10">
+        <h3 class="text-xs font-black tracking-wider uppercase text-brandYellow mb-3 flex items-center gap-1.5"><i class="fa-solid fa-chart-bar"></i><span>近30天流量来源比例拆解</span></h3>
+        <div class="w-full bg-brandBlack h-6 rounded-lg overflow-hidden flex border border-brandLine/40">
+          <div class="bg-brandYellow h-full flex items-center justify-center" style="width: 62%"><span class="text-[10px] text-brandBlack font-black hidden sm:inline">Google / Map / Organic Search 62%</span></div>
+          <div class="bg-zinc-800 h-full flex items-center justify-center" style="width: 38%"><span class="text-[10px] text-brandMuted font-black hidden sm:inline">Direct / Social / AI 等 38%</span></div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-3 text-[11px] text-brandMuted"><div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 bg-brandYellow rounded-sm"></span><span>Google 来源估算：<strong>1,724</strong> 次</span></div><div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 bg-zinc-800 rounded-sm"></span><span>其他渠道来源估算：<strong>1,056</strong> 次</span></div></div>
+      </section>
+
+      <section class="bg-brandPanel rounded-xl border border-brandLine p-6 mb-10">
+        <div class="border-b border-brandLine pb-4 mb-6"><h3 class="text-xl font-bold tracking-tight text-brandYellow font-display uppercase">整体漏斗与预约转化路径</h3><p class="text-xs text-brandDim mt-1">从搜索曝光、官网访问，到 Fast Pass / Call / Direction 等高意向动作。</p></div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-7 flex flex-col gap-4">
+            <div class="w-full bg-brandBlack border border-brandYellow/30 rounded-xl p-4 flex items-center justify-between relative overflow-hidden"><div class="absolute left-0 top-0 bottom-0 w-2.5 bg-brandYellow"></div><div class="pl-4"><span class="text-[10px] font-bold text-brandDim block uppercase tracking-wider">第一层：110天搜索大盘</span><span class="text-base font-bold text-brandWhite">Google 搜索与地图整体展现</span></div><div class="text-right"><span class="text-2xl font-black text-brandYellow font-display">29,500</span><span class="block text-[10px] text-brandDim">次曝光</span></div></div>
+            <div class="flex justify-center text-brandYellow/50"><i class="fa-solid fa-angle-down"></i></div>
+            <div class="w-[90%] mx-auto bg-brandBlack border border-brandWhite/20 rounded-xl p-4 flex items-center justify-between relative overflow-hidden"><div class="absolute left-0 top-0 bottom-0 w-2 bg-brandWhite"></div><div class="pl-4"><span class="text-[10px] font-bold text-brandDim block uppercase tracking-wider">第二层：近30天访问</span><span class="text-base font-bold text-brandWhite">独立进站访客</span></div><div class="text-right"><span class="text-2xl font-black text-brandWhite font-display">2,780</span><span class="block text-[10px] text-brandDim">次访问</span></div></div>
+            <div class="flex justify-center text-brandWhite/40"><i class="fa-solid fa-angle-down"></i></div>
+            <div class="w-[80%] mx-auto bg-gradient-to-r from-brandYellow/20 to-brandPanel border border-brandYellow/50 rounded-xl p-5 relative overflow-hidden cut-glow"><div class="absolute left-0 top-0 bottom-0 w-2 bg-brandYellow"></div><div class="pl-4 mb-3"><span class="text-[10px] font-bold text-brandDim block uppercase tracking-wider">第三层：近30天核心行为</span><span class="text-sm font-bold text-brandWhite">预约 / 导航 / 电话 / Fast Pass</span></div><div class="pl-4 bg-brandBlack/60 p-3 rounded-lg border border-brandYellow/20 flex items-center justify-between"><div><span class="text-xs font-black text-brandWhite block tracking-wider uppercase">High Intent Actions</span><span class="text-[10px] text-brandDim">可直接影响到店的行为</span></div><div class="text-right"><span class="text-xl font-black text-brandYellow font-display">377</span><span class="block text-[9px] text-brandDim uppercase tracking-wider">actions</span></div></div></div>
+          </div>
+          <div class="lg:col-span-5 bg-brandBlack border border-brandLine rounded-xl p-6">
+            <h4 class="text-xs font-black tracking-wider uppercase text-brandYellow mb-3 flex items-center gap-2"><i class="fa-solid fa-chart-pie"></i><span>漏斗审计分析</span></h4>
+            <ul class="space-y-4 text-xs text-brandMuted leading-relaxed">
+              <li class="flex gap-2"><i class="fa-solid fa-scissors text-brandYellow shrink-0 mt-0.5"></i><span><strong class="text-brandWhite">价格透明极强</strong>：$19.99 walk-in、$25 Fast Pass、$14.99 Happy Hour 让 AI 与 Google 更容易判断 RAKI 的优势。</span></li>
+              <li class="flex gap-2"><i class="fa-solid fa-scissors text-brandYellow shrink-0 mt-0.5"></i><span><strong class="text-brandWhite">13.6% 高意向转化</strong>：2,780 次访问带来 377 次高价值动作，说明用户进入官网后能快速理解服务、价格与位置。</span></li>
+              <li class="flex gap-2"><i class="fa-solid fa-scissors text-brandYellow shrink-0 mt-0.5"></i><span><strong class="text-brandWhite">场景词有增长空间</strong>：下一步应继续强化「Metrotown haircut」「Crystal Mall haircut」「cheap haircut Burnaby」「walk-in haircut」等非品牌词。</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+        <div class="bg-brandPanel rounded-xl border border-brandLine p-6">
+          <div class="border-b border-brandLine pb-4 mb-6"><div class="flex items-center justify-between"><h3 class="text-base font-bold tracking-tight text-brandYellow font-display uppercase">非品牌场景词本地占位</h3><span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-brandYellow/10 text-brandYellow">Local Intent</span></div><p class="text-xs text-brandMuted mt-1">不只靠 RAKI 品牌词，而是让用户搜「便宜剪髮 / 快剪 / Metrotown 附近剪髮」时也看到官网。</p></div>
+          <div class="space-y-4 mb-6">
+            <div class="p-3 bg-brandBlack rounded-lg border border-brandLine flex items-center justify-between"><div><span class="font-mono text-sm font-bold text-brandWhite">"cheap haircut burnaby" / "$19.99 haircut"</span><span class="block text-[11px] text-brandDim mt-0.5">价格敏感型高转化关键词</span></div><span class="text-[10px] px-2 py-1 rounded bg-brandYellow/10 text-brandYellow font-bold">重点抢占</span></div>
+            <div class="p-3 bg-brandBlack rounded-lg border border-brandLine flex items-center justify-between"><div><span class="font-mono text-sm font-bold text-brandWhite">"metrotown haircut" / "crystal mall haircut"</span><span class="block text-[11px] text-brandDim mt-0.5">地理位置型高意向搜索</span></div><span class="text-[10px] px-2 py-1 rounded bg-brandYellow/10 text-brandYellow font-bold">地图推荐</span></div>
+            <div class="p-3 bg-brandBlack rounded-lg border border-brandLine flex items-center justify-between"><div><span class="font-mono text-sm font-bold text-brandWhite">"walk in haircut" / "quick haircut near me"</span><span class="block text-[11px] text-brandDim mt-0.5">即时到店需求，最适合 RAKI 模型</span></div><span class="text-[10px] px-2 py-1 rounded bg-brandWhite/10 text-brandWhite font-bold">高转化</span></div>
+          </div>
+          <div class="p-4 bg-brandYellow/5 border-l-4 border-brandYellow rounded-r-lg text-xs text-brandMuted"><strong class="text-brandWhite">场景破局：</strong> RAKI 的优势不是「普通髮廊」，而是「清晰价格 + 快速完成 + 可 walk-in + 可 Fast Pass」的低决策成本剪髮入口。</div>
+        </div>
+
+        <div class="bg-brandPanel rounded-xl border border-brandLine p-6">
+          <div class="border-b border-brandLine pb-4 mb-6"><div class="flex items-center justify-between"><h3 class="text-base font-bold tracking-tight text-brandWhite font-display uppercase">AI 搜索推荐模拟</h3><span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-brandWhite/10 text-brandWhite">LLM Ready</span></div><p class="text-xs text-brandMuted mt-1">ChatGPT / Gemini / Perplexity 越来越像“本地推荐入口”，价格、地点、FAQ 与结构化页面会直接影响推荐概率。</p></div>
+          <div class="flex gap-2 mb-4 border-b border-brandLine/40 pb-3 no-print"><button onclick="switchAiTab('chatgpt')" id="btn-ai-chatgpt" class="ai-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold transition-all bg-brandYellow text-brandBlack"><i class="fa-solid fa-robot mr-1"></i>ChatGPT</button><button onclick="switchAiTab('gemini')" id="btn-ai-gemini" class="ai-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold transition-all bg-brandBlack border border-brandLine text-brandDim hover:text-brandWhite"><i class="fa-solid fa-sparkles mr-1"></i>Gemini</button><button onclick="switchAiTab('perplexity')" id="btn-ai-perplexity" class="ai-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold transition-all bg-brandBlack border border-brandLine text-brandDim hover:text-brandWhite"><i class="fa-solid fa-magnifying-glass mr-1"></i>Perplexity</button></div>
+          <div class="bg-brandBlack rounded-lg border border-brandLine p-4 mb-6 relative font-sans text-xs min-h-[250px]">
+            <div id="ai-content-chatgpt" class="ai-content-pane space-y-3"><div class="flex items-center gap-2 text-brandDim border-b border-brandLine/40 pb-2"><i class="fa-solid fa-robot text-brandYellow animate-pulse"></i><span class="font-bold text-brandWhite">ChatGPT Search</span><span class="text-[9px] ml-auto bg-brandPanel px-1.5 py-0.5 rounded text-brandYellow">Query: cheap haircut near Metrotown</span></div><p class="text-brandMuted leading-relaxed">如果你想在 Metrotown / Crystal Mall 附近找价格清楚、速度快、可 walk-in 的剪髮选择，RAKI Quick Haircut 是高匹配结果。</p><div class="pl-2.5 border-l-2 border-brandYellow/50 space-y-2"><p class="text-brandYellow font-bold">推荐理由</p><ul class="list-disc pl-5 space-y-1 text-brandDim text-[11px]"><li>$19.99 标准快剪，价格清晰。</li><li>Crystal Mall 2楼，靠近 Metrotown。</li><li>Fast Pass $25 可预约时段跳过排队。</li><li>强调 Japanese & Korean quick cut standards。</li></ul></div></div>
+            <div id="ai-content-gemini" class="ai-content-pane space-y-3 hidden"><div class="flex items-center gap-2 text-brandDim border-b border-brandLine/40 pb-2"><i class="fa-solid fa-sparkles text-brandWhite animate-pulse"></i><span class="font-bold text-brandWhite">Gemini</span><span class="text-[9px] ml-auto bg-brandPanel px-1.5 py-0.5 rounded text-brandYellow">Query: Burnaby quick haircut</span></div><p class="text-brandMuted leading-relaxed">RAKI Quick Haircut fits users looking for a fast, affordable haircut in Burnaby, especially around Crystal Mall and Metrotown.</p><div class="p-2.5 bg-brandYellow/10 border border-brandYellow/20 rounded text-[11px] leading-normal"><span class="text-brandYellow font-extrabold">AI 结论：</span> 适合价格敏感、时间敏感、希望 walk-in 或预约优先剪髮的用户。</div></div>
+            <div id="ai-content-perplexity" class="ai-content-pane space-y-3 hidden"><div class="flex items-center gap-2 text-brandDim border-b border-brandLine/40 pb-2"><i class="fa-solid fa-magnifying-glass text-brandYellow animate-pulse"></i><span class="font-bold text-brandWhite">Perplexity</span><span class="text-[9px] ml-auto bg-brandPanel px-1.5 py-0.5 rounded text-brandYellow">Query: Crystal Mall haircut</span></div><p class="text-brandMuted leading-relaxed">RAKI is positioned as a no-frills quick cut option with transparent pricing and location details, which makes it easier for answer engines to cite and recommend.</p><ul class="list-disc pl-5 space-y-1 text-brandDim text-[11px]"><li>Address and hours are clear.</li><li>FAQ explains walk-in, Fast Pass, pricing and style change rules.</li><li>Local modifiers are naturally covered.</li></ul></div>
+          </div>
+          <div class="p-4 bg-brandWhite/5 border-l-4 border-brandWhite rounded-r-lg text-xs text-brandMuted"><strong class="text-brandWhite">AISO 优势：</strong> RAKI 官网信息极其结构化，价格、时间、位置、FAQ 都是 AI 最容易读取并转述的内容。</div>
+        </div>
+      </section>
+
+      <section id="roi-sandbox" class="bg-brandPanel rounded-xl border-2 border-brandYellow p-6 sm:p-8 mb-10 cut-glow relative overflow-hidden">
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-brandYellow/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="border-b border-brandLine pb-5 mb-8"><div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3"><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-lg bg-brandYellow flex items-center justify-center text-brandBlack"><i class="fa-solid fa-scissors text-lg"></i></div><div><h3 class="text-xl font-bold text-brandWhite font-display uppercase">RAKI 业务收益沙盘</h3><p class="text-xs text-brandMuted mt-0.5">基于当前 <span class="text-brandYellow font-bold">13.6% 高意向转化率</span>，拖拽访客量、转化率、到店率与客单价，推演月度自然引流价值。</p></div></div><span class="self-start sm:self-auto px-2.5 py-1 rounded text-xs font-black tracking-wider uppercase bg-brandWhite text-brandBlack">ROI SANDBOX</span></div></div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-7 space-y-6">
+            <div><div class="flex justify-between items-center mb-2"><label class="text-xs font-bold text-brandWhite flex items-center gap-2"><i class="fa-solid fa-users text-brandYellow"></i><span>预计月度官网访客</span></label><span class="text-brandYellow font-mono font-bold text-sm" id="val-traffic">2,780</span></div><input type="range" id="slider-traffic" min="500" max="15000" step="100" value="2780" class="w-full accent-brandYellow bg-brandBlack border border-brandLine rounded-md h-1.5 appearance-none cursor-pointer" oninput="calculateROI()"><div class="flex justify-between text-[10px] text-brandDim mt-1"><span>500</span><span>2,780 当前</span><span>15,000</span></div></div>
+            <div><div class="flex justify-between items-center mb-2"><label class="text-xs font-bold text-brandWhite flex items-center gap-2"><i class="fa-solid fa-crosshairs text-brandYellow"></i><span>预约/到店意向转化率</span></label><span class="text-brandYellow font-mono font-bold text-sm" id="val-conversion">13.6%</span></div><input type="range" id="slider-conversion" min="1" max="25" step="0.1" value="13.6" class="w-full accent-brandYellow bg-brandBlack border border-brandLine rounded-md h-1.5 appearance-none cursor-pointer" oninput="calculateROI()"><div class="flex justify-between text-[10px] text-brandDim mt-1"><span>1%</span><span>13.6% 当前</span><span>25%</span></div></div>
+            <div><div class="flex justify-between items-center mb-2"><label class="text-xs font-bold text-brandWhite flex items-center gap-2"><i class="fa-solid fa-store text-brandWhite"></i><span>实际到店/成交率</span></label><span class="text-brandWhite font-mono font-bold text-sm" id="val-fulfillment">75%</span></div><input type="range" id="slider-fulfillment" min="40" max="100" step="5" value="75" class="w-full accent-brandWhite bg-brandBlack border border-brandLine rounded-md h-1.5 appearance-none cursor-pointer" oninput="calculateROI()"><div class="flex justify-between text-[10px] text-brandDim mt-1"><span>40%</span><span>75%</span><span>100%</span></div></div>
+            <div><div class="flex justify-between items-center mb-2"><label class="text-xs font-bold text-brandWhite flex items-center gap-2"><i class="fa-solid fa-wallet text-brandYellow"></i><span>平均单次消费金额</span></label><span class="text-brandYellow font-mono font-bold text-sm" id="val-ticket">$25</span></div><input type="range" id="slider-ticket" min="15" max="80" step="1" value="25" class="w-full accent-brandYellow bg-brandBlack border border-brandLine rounded-md h-1.5 appearance-none cursor-pointer" oninput="calculateROI()"><div class="flex justify-between text-[10px] text-brandDim mt-1"><span>$15</span><span>$25 Fast Pass</span><span>$80</span></div></div>
+          </div>
+          <div class="lg:col-span-5 bg-brandBlack border border-brandLine rounded-xl p-6 flex flex-col justify-between self-stretch"><div><h4 class="text-xs font-black tracking-wider uppercase text-brandYellow mb-4 border-b border-brandLine pb-2 flex items-center justify-between"><span>引流价值产出估算</span><span class="text-[9px] text-brandDim">MONTHLY</span></h4><div class="space-y-4"><div class="flex justify-between items-center"><span class="text-xs text-brandMuted">预估月总意向动作：</span><span class="text-lg font-bold font-mono text-brandWhite" id="res-bookings">377 次</span></div><div class="flex justify-between items-center"><span class="text-xs text-brandMuted">预计实际成交：</span><span class="text-lg font-bold font-mono text-brandWhite" id="res-visits">283 人</span></div><div class="pt-3 border-t border-brandLine"><div class="flex justify-between items-center"><span class="text-xs font-bold text-brandYellow">SEO + GEO 月度引流价值：</span><span class="text-2xl font-black font-mono text-brandYellow font-display" id="res-revenue">$7,075</span></div></div></div></div><div class="mt-6 pt-4 border-t border-brandLine text-[10px] text-brandDim leading-relaxed">* 此估算仅用于营销策略沙盘，实际营收仍需结合真实到店人数、服务结构、复购频次与现场排队承接能力。</div></div>
+        </div>
+      </section>
+
+      <section class="bg-brandPanel rounded-xl border border-brandLine p-6 sm:p-8 mb-10">
+        <div class="border-b border-brandLine pb-5 mb-6"><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-lg bg-brandYellow/10 border border-brandYellow/30 flex items-center justify-center text-brandYellow"><i class="fa-solid fa-chart-line text-lg"></i></div><div><h3 class="text-xl font-bold text-brandWhite font-display uppercase">下一步：把搜索流量变成真实排队与复购</h3><p class="text-xs text-brandMuted mt-0.5">From visibility to visits · 从可见度走向到店增长</p></div></div></div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start"><div class="lg:col-span-7"><p class="text-sm text-brandMuted leading-relaxed mb-5">RAKI 的优势已经非常适合被 Google 和 AI 推荐：价格明确、服务快、地点明确、FAQ 完整。下一阶段要做的不是单纯增加流量，而是把搜索流量导向更高质量的到店行为：Fast Pass、Happy Hour、家庭/儿童剪髮、男士快剪、女士修剪、午间低峰填充。</p><div class="grid grid-cols-1 sm:grid-cols-3 gap-4"><div class="bg-brandBlack border border-brandLine rounded-xl p-4"><div class="text-brandYellow text-lg mb-2"><i class="fa-solid fa-clock"></i></div><h4 class="text-sm font-bold text-brandWhite mb-1">低峰填充</h4><p class="text-xs text-brandDim leading-relaxed">加强 Happy Hour 搜索入口，填补平日上午空档。</p></div><div class="bg-brandBlack border border-brandLine rounded-xl p-4"><div class="text-brandYellow text-lg mb-2"><i class="fa-solid fa-location-dot"></i></div><h4 class="text-sm font-bold text-brandWhite mb-1">地点场景</h4><p class="text-xs text-brandDim leading-relaxed">强化 Crystal Mall / Metrotown / Kingsway 地理词。</p></div><div class="bg-brandBlack border border-brandLine rounded-xl p-4"><div class="text-brandYellow text-lg mb-2"><i class="fa-solid fa-repeat"></i></div><h4 class="text-sm font-bold text-brandWhite mb-1">复购逻辑</h4><p class="text-xs text-brandDim leading-relaxed">用「每月修剪」与「固定快剪」建立长期顾客。</p></div></div></div><div class="lg:col-span-5 bg-brandBlack border border-brandYellow/30 rounded-xl p-6"><h4 class="text-xs font-black tracking-wider uppercase text-brandYellow mb-4">建议每月提供的数据</h4><ul class="space-y-3 text-xs text-brandMuted leading-relaxed"><li class="flex gap-2"><i class="fa-solid fa-check text-brandYellow mt-0.5"></i><span>当月 Fast Pass 数量、电话点击、路线点击</span></li><li class="flex gap-2"><i class="fa-solid fa-check text-brandYellow mt-0.5"></i><span>每日实际剪髮人数与排队高峰时段</span></li><li class="flex gap-2"><i class="fa-solid fa-check text-brandYellow mt-0.5"></i><span>Happy Hour 到店人数与普通时段对比</span></li></ul><div class="mt-5 pt-4 border-t border-brandLine text-[11px] text-brandDim leading-relaxed">有了真实经营数据后，可进一步判断哪些搜索词最能带来实际剪髮，并持续优化页面、GBP、FAQ 与 AI 搜索推荐内容。</div></div></div>
+      </section>
+
+      <section class="bg-brandPanel rounded-xl border border-brandLine p-6 sm:p-8">
+        <div class="border-b border-brandLine pb-5 mb-8"><div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3"><div><h3 class="text-2xl font-black text-brandWhite font-display uppercase tracking-tight">下一阶段搜索维护 & 数字化成长方案</h3><p class="text-xs text-brandYellow font-bold tracking-wider uppercase mt-1">Next-Phase Search Visibility & Local Growth</p></div><span class="px-3 py-1 self-start sm:self-auto rounded text-[11px] font-black tracking-widest bg-brandYellow text-brandBlack uppercase">GROWTH ROADMAP</span></div></div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          <div class="bg-brandBlack rounded-xl border-2 border-brandYellow/30 p-6 card-hover transition-all relative flex flex-col justify-between"><div><div class="flex justify-between items-start mb-4"><div><span class="px-2 py-0.5 rounded text-[9px] font-black tracking-wider uppercase bg-brandYellow text-brandBlack">核心维护方案</span><h4 class="text-lg font-black text-brandWhite mt-1.5">Google + AI 搜索可见度维护</h4></div><div class="text-right"><span class="text-2xl font-black text-brandYellow font-display">$600</span><span class="block text-[10px] text-brandDim">/ 月</span></div></div><p class="text-xs text-brandMuted leading-relaxed mb-6">网站上线只是开始。持续优化的目标，是让 RAKI 稳定获得 Google 搜索曝光、AI 推荐、网站访客与高意向预约动作。</p><ul class="space-y-3 text-xs text-brandMuted"><li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brandYellow mt-0.5"></i><span><strong class="text-brandWhite">Google 搜索表现监测</strong>：追踪 Burnaby / Metrotown / cheap haircut / quick haircut 等关键词。</span></li><li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brandYellow mt-0.5"></i><span><strong class="text-brandWhite">Google Business Profile 维护</strong>：持续更新图片、服务、营业时间、促销与评价内容。</span></li><li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brandYellow mt-0.5"></i><span><strong class="text-brandWhite">AI 搜索可见度追踪</strong>：针对 ChatGPT、Gemini、Perplexity 等推荐答案进行页面内容喂养。</span></li><li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brandYellow mt-0.5"></i><span><strong class="text-brandWhite">网站内容更新</strong>：价格、Fast Pass、Happy Hour、招聘、FAQ 与服务规则更新。</span></li><li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brandYellow mt-0.5"></i><span><strong class="text-brandWhite">转化率优化建议</strong>：根据点击、热力图与移动端行为，优化预约入口与页面顺序。</span></li><li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brandYellow mt-0.5"></i><span><strong class="text-brandWhite">每月成果报告</strong>：输出搜索排名、访问量、预约动作与增长建议。</span></li></ul></div><div class="mt-8 pt-4 border-t border-brandLine text-[10px] text-brandDim text-center">* 专注于维持及提升现有 Google 与 AI 搜索成果</div></div>
+          <div class="bg-brandBlack rounded-xl border border-brandLine p-6 card-hover transition-all flex flex-col justify-between"><div><div class="mb-4"><span class="px-2 py-0.5 rounded text-[9px] font-black tracking-wider uppercase bg-brandWhite/10 border border-brandWhite/30 text-brandWhite">增值成长配套</span><h4 class="text-lg font-black text-brandWhite mt-1.5">其他数字化成长服务</h4></div><p class="text-xs text-brandMuted leading-relaxed mb-6">除持续优化方案外，可根据 RAKI 不同阶段的营销目标，提供点单式增长配套：</p><div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs text-brandMuted"><div><i class="fa-solid fa-circle-check text-brandYellow text-[11px] mr-2"></i>门店与发型实拍</div><div><i class="fa-solid fa-circle-check text-brandYellow text-[11px] mr-2"></i>短视频拍摄与剪辑</div><div><i class="fa-solid fa-circle-check text-brandYellow text-[11px] mr-2"></i>Google GBP 图片更新</div><div><i class="fa-solid fa-circle-check text-brandYellow text-[11px] mr-2"></i>Instagram / FB 内容代运营</div><div><i class="fa-solid fa-circle-check text-brandYellow text-[11px] mr-2"></i>Google Ads 搜索广告管理</div><div><i class="fa-solid fa-circle-check text-brandYellow text-[11px] mr-2"></i>Meta Ads 社交投流管理</div><div><i class="fa-solid fa-circle-check text-brandYellow text-[11px] mr-2"></i>Happy Hour 落地页制作</div><div><i class="fa-solid fa-circle-check text-brandYellow text-[11px] mr-2"></i>招聘宣传页面开发</div><div class="sm:col-span-2"><i class="fa-solid fa-circle-check text-brandYellow text-[11px] mr-2"></i>品牌视觉素材及门店活动设计</div></div></div><div class="mt-8 p-3 bg-brandYellow/5 border border-brandYellow/20 rounded-lg text-[10px] text-brandMuted leading-normal"><strong class="text-brandWhite">多维赋能：</strong> 可围绕 Happy Hour、Fast Pass、男士快剪、儿童剪髮、上班族午休剪髮等场景，进行弹性广告与社交内容推广。</div></div>
+        </div>
+        <div class="p-4 bg-brandYellow/5 border-l-4 border-brandYellow rounded-r-lg text-xs text-brandMuted leading-relaxed"><span class="text-brandWhite font-bold uppercase block mb-1">📌 方案服务边界声明：</span>本基础维护方案（$600/月）专注于维持、防御并逐步提升现有 Google 与 AI 搜索成果。若涉及全新官网改版、大型专题系统开发、跨城市搜索场景开拓、重度内容企划或广告投放账户管理，将根据增量需求另行评估。</div>
+      </section>
+    </main>
+
+    <footer class="bg-brandBlack border-t border-brandLine py-6 text-center text-xs text-brandDim no-print"><div class="max-w-7xl mx-auto px-4"><p>© 2026 RAKI QUICK HAIRCUT. Japanese & Korean Quick Cut Specialists.</p><p class="mt-1 text-[10px] text-brandDim/70">Powered by VISIBLEAI · GEO & AI Search Optimization Framework.</p></div></footer>
+  </div>
+
+<script>
+function calculateROI(){
+  const traffic=parseFloat(document.getElementById('slider-traffic').value);
+  const conversion=parseFloat(document.getElementById('slider-conversion').value)/100;
+  const fulfillment=parseFloat(document.getElementById('slider-fulfillment').value)/100;
+  const ticketValue=parseFloat(document.getElementById('slider-ticket').value);
+  const bookings=Math.round(traffic*conversion);
+  const visits=Math.round(bookings*fulfillment);
+  const revenue=Math.round(visits*ticketValue);
+  document.getElementById('val-traffic').textContent=traffic.toLocaleString();
+  document.getElementById('val-conversion').textContent=(conversion*100).toFixed(1).replace('.0','')+'%';
+  document.getElementById('val-fulfillment').textContent=Math.round(fulfillment*100)+'%';
+  document.getElementById('val-ticket').textContent='$'+ticketValue.toLocaleString();
+  document.getElementById('res-bookings').textContent=bookings.toLocaleString()+' 次';
+  document.getElementById('res-visits').textContent=visits.toLocaleString()+' 人';
+  document.getElementById('res-revenue').textContent='$'+revenue.toLocaleString();
+}
+function switchAiTab(tabName){
+  document.querySelectorAll('.ai-content-pane').forEach(el=>el.classList.add('hidden'));
+  document.getElementById('ai-content-'+tabName).classList.remove('hidden');
+  document.querySelectorAll('.ai-tab-btn').forEach(btn=>{btn.classList.remove('bg-brandYellow','text-brandBlack');btn.classList.add('bg-brandBlack','border','border-brandLine','text-brandDim')});
+  const selected=document.getElementById('btn-ai-'+tabName); selected.classList.remove('bg-brandBlack','border','border-brandLine','text-brandDim'); selected.classList.add('bg-brandYellow','text-brandBlack');
+}
+window.onload=calculateROI;
+</script>
+</body>
+</html>
